@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
         String[] cities = {"Лубни", "Миргород", "Полтава", "Місто"};
-        String[] streets = {"Миколи Міхновського", "Вербова", "Історична", "Вулиця"};
+        String[] streets = {"Першотравнева", "Вербова", "Історична", "Вулиця"};
         for(int i = 0; i < cities.length; i++) {
             System.out.println("Щоб отримати графік відключень електроенергії по Полтавській області\nВведіть назву населеного пункту: " + cities[i]);
             System.out.println("Введіть назву вулиці: " + streets[i]);
