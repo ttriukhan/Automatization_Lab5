@@ -38,6 +38,18 @@ jobs:
         name: my-app-jar
         path: target/*.jar
 
+    - name: Set up settings.xml for Maven
+      run: |
+        echo "<settings>
+            <servers>
+              <server>
+                <id>github</id>
+                <username>${{ github.actor }}</username>
+                <password>${{ secrets.GITHUB_TOKEN }}</password>
+              </server>
+            </servers>
+          </settings>" > $GITHUB_WORKSPACE/settings.xml
+
     - name: Add artifact to repository
       run: mvn --batch-mode deploy
       env:
